@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Product Dashboard</h1>
+    <p class="sub">Live product data from the DummyJSON public API.</p>
+
+    <section class="stats" id="stats" hidden aria-label="Summary">
+      <div class="stat"><b id="statCount">0</b><span>Products shown</span></div>
+      <div class="stat"><b id="statCats">0</b><span>Categories</span></div>
+      <div class="stat"><b id="statAvg">$0</b><span>Average price</span></div>
+    </section>
+
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search products by name" aria-label="Search products" disabled>
+      <select id="category" aria-label="Filter by category" disabled>
+        <option value="all">All categories</option>
+      </select>
+    </div>
+
+    <div id="status" aria-live="polite"></div>
+    <section class="grid" id="grid" aria-label="Products"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
